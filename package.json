@@ -21,6 +21,13 @@
     "gulp-sass": "^2.1.1",
     "jshint": "^2.8.0"
   },
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5"
+  },
+  "description": "",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

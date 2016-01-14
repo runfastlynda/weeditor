@@ -12,8 +12,14 @@
             banner
         </div>
         <div class="main clearfix">
-            <div id="left">
-                 checklists
+            <div id="left" class="">
+                <div id="checklist">
+                    <ul>
+                        <li class="todo-item" v-for="todo in todos" :class="{ completed: todo.completed }">
+                            <input type="checkbox" class="toggle" v-model="todo.completed"/><label for="">{{ todo.item }}</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div id="center">
                 editor area
@@ -24,5 +30,17 @@
         </div>
 
         <script src="js/main.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            new Vue({
+              el: '#checklist',
+              data: {
+                todos: [
+                  { item: 'Learn JavaScript' },
+                  { item: 'Learn Vue.js' },
+                  { item: 'Build Something Awesome' }
+                ]
+              }
+            })
+        </script>
     </body>
 </html>

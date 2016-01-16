@@ -22,10 +22,9 @@
                 </div>
             </div>
             <div id="center">
-                editor area
+                <textarea v-model="input"></textarea>
             </div>
-            <div id="right">
-                preview area
+            <div id="right" v-html="input">
             </div>
         </div>
 
@@ -39,6 +38,12 @@
                   { item: 'Learn Vue.js' },
                   { item: 'Build Something Awesome' }
                 ]
+              }
+            })
+            new Vue({
+              el: '.main',
+              data: {
+                input: '#hello'
               }
             })
         </script>

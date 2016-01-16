@@ -47,6 +47,10 @@ body {
     height: 100%;
     float: left;
     background: blue; }
+    .main #center textarea {
+      width: 100%;
+      height: 100%;
+      outline: none; }
   .main #right {
     width: 42%;
     height: 100%;

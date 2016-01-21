@@ -21,7 +21,8 @@ html {
 body {
   width: 100%;
   height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Avenir, sans-serif; }
 
 .banner {
   width: 100%;
@@ -59,7 +60,164 @@ body {
     height: 100%;
     float: left;
     padding: 20px;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    font-size: 18px; }
+    .main #right h1 {
+      font-size: 1.3em;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      padding-top: 2px;
+      outline: 0px;
+      font-weight: normal;
+      line-height: 1.3em;
+      color: #333333; }
+    .main #right h2 {
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      padding-top: 2px;
+      outline: 0px;
+      line-height: 1.1em;
+      font-weight: normal;
+      color: #333333; }
+    .main #right h3 {
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      padding-top: 2px;
+      outline: 0px;
+      font-weight: normal;
+      line-height: 1.1em;
+      color: #ea4c89; }
+    .main #right h4 {
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      padding-top: 2px;
+      outline: 0px;
+      line-height: 1.1em;
+      font-weight: normal;
+      color: #339bcb; }
+    .main #right h5 {
+      border-width: 0px 0px 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #eaeaea;
+      font-size: 1em;
+      margin-bottom: 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      outline: 0px;
+      line-height: 1.1em;
+      font-weight: normal;
+      color: #999999; }
+    .main #right h6 {
+      border-width: 0px 0px 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #eaeaea;
+      font-size: 0.8em;
+      margin-bottom: 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      outline: 0px;
+      line-height: 1.1em;
+      color: #aaaaaa;
+      font-weight: normal; }
+    .main #right ul {
+      font-size: 18px;
+      margin: 0.8em 1em;
+      padding-left: 0.8em;
+      outline: 0px;
+      color: #333333; }
+    .main #right hr {
+      border-right-width: 0px;
+      border-bottom-width: 0px;
+      border-left-width: 0px;
+      border-top-style: solid;
+      border-top-color: #eaeaea;
+      height: 1px;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      color: #333333;
+      font-size: 18px; }
+    .main #right s {
+      text-decoration: line-through; }
+    .main #right strong {
+      border: 0px;
+      outline: 0px;
+      color: #252525; }
+    .main #right blockquote {
+      border-width: 0px 0px 0px 0.4em;
+      border-left-color: #dddddd;
+      font-size: 18px;
+      margin-top: 2px;
+      margin-bottom: 22px;
+      outline: 0px;
+      quotes: none;
+      color: #333333;
+      padding-left: 5px; }
+    .main #right code {
+      padding: 0;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin: 0;
+      font-size: 85%;
+      background-color: #f7f7f7;
+      border-radius: 3px; }
+    .main #right code:before, .main #right code:after {
+      letter-spacing: -0.2em;
+      content: "\00a0"; }
+    .main #right pre > code {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+      white-space: pre;
+      background: transparent;
+      border: 0; }
+    .main #right pre {
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f7f7f7;
+      word-wrap: normal; }
+    .main #right pre code {
+      display: inline;
+      max-width: initial;
+      padding: 0;
+      margin: 0;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: noraml;
+      background-color: transparent;
+      border: 0; }
+    .main #right pre code:before, .main #right pre code:after {
+      content: normal; }
+    .main #right img {
+      border: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      outline: 0px;
+      display: block;
+      width: 20px !important;
+      visibility: visible !important;
+      height: auto !important; }
+    .main #right ul > ul {
+      list-style-type: square; }
+    .main #right table {
+      width: 100%;
+      overflow: auto;
+      text-align: center; }
+    .main #right table th {
+      font-weight: normal; }
+    .main #right table th, .main #right table td {
+      padding: 6px 13px;
+      border: 1px solid #ddd; }
+    .main #right table tr {
+      background-color: #fff;
+      border-top: 1px solid #ccc; }
+    .main #right table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
   .main .completed {
     color: #d9d9d9;
     text-decoration: line-through; }

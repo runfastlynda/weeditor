@@ -9,8 +9,8 @@ html {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";/* 1 */
+    display: table;/* 2 */
 }
 .clearfix:after {
     clear: both;
@@ -23,6 +23,7 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 .banner{
@@ -66,6 +67,201 @@ body {
         float: left;
         padding: 20px;
         border: 1px solid #ccc;
+        font-size: 18px;
+        h1 {
+          font-size: 1.3em;
+          margin-bottom: 12px;
+          margin-top: 12px;
+          padding-top: 2px;
+          outline: 0px;
+          font-weight: normal;
+          line-height: 1.3em;
+          color: rgb(51, 51, 51);
+        }
+
+        h2 {
+          font-size: 1.2em;
+          margin-bottom: 12px;
+          margin-top: 12px;
+          padding-top: 2px;
+          outline: 0px;
+          line-height: 1.1em;
+          font-weight: normal;
+          color: rgb(51, 51, 51);
+        }
+
+        h3 {
+          font-size: 1.2em;
+          margin-bottom: 12px;
+          margin-top: 12px;
+          padding-top: 2px;
+          outline: 0px;
+          font-weight: normal;
+          line-height: 1.1em;
+          color: rgb(234, 76, 137);
+        }
+
+
+        h4 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        padding-top: 2px;
+        outline: 0px;
+        line-height: 1.1em;
+        font-weight: normal;
+        color: rgb(51, 155, 203);
+        }
+
+        h5 {
+          border-width: 0px 0px 1px;
+          border-bottom-style: solid;
+          border-bottom-color: rgb(234, 234, 234);
+          font-size: 1em;
+          margin-bottom: 5px;
+          padding-top: 10px;
+          padding-bottom: 5px;
+          outline: 0px;
+          line-height: 1.1em;
+          font-weight: normal;
+          color: rgb(153, 153, 153);
+        }
+
+        h6 {
+          border-width: 0px 0px 1px;
+          border-bottom-style: solid;
+          border-bottom-color: rgb(234, 234, 234);
+          font-size: 0.8em;
+          margin-bottom: 5px;
+          padding-top: 10px;
+          padding-bottom: 5px;
+          outline: 0px;
+          line-height: 1.1em;
+          color: rgb(170, 170, 170);
+          font-weight: normal;
+        }
+
+        ul {
+          font-size: 18px;
+          margin: 0.8em 1em;
+          padding-left: 0.8em;
+          outline: 0px;color: rgb(51, 51, 51);
+        }
+
+        hr {
+          border-right-width: 0px;
+          border-bottom-width: 0px;
+          border-left-width: 0px;
+          border-top-style: solid;
+          border-top-color: rgb(234, 234, 234);
+          height: 1px;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          color: rgb(51, 51, 51);
+          font-size: 18px;
+        }
+
+        s {
+          text-decoration:line-through;
+        }
+
+        strong {
+          border: 0px;
+          outline: 0px;
+          color: rgb(37, 37, 37);
+        }
+
+        blockquote {
+          border-width: 0px 0px 0px 0.4em;
+          border-left-color: rgb(221, 221, 221);
+          font-size: 18px;
+          margin-top: 2px;
+          margin-bottom: 22px;
+          outline: 0px;
+          quotes: none;
+          color: rgb(51, 51, 51);
+          padding-left: 5px;
+        }
+
+        code {
+          padding: 0;
+          padding-top: 0.2em;
+          padding-bottom: 0.2em;
+          margin: 0;
+          font-size: 85%;
+          background-color: #f7f7f7;
+          border-radius: 3px;
+        }
+        code:before, code:after {
+          letter-spacing: -0.2em;
+          content: "\00a0";
+        }
+        pre > code {
+          padding: 0;
+          margin: 0;
+          font-size: 100%;
+          white-space: pre;
+          background: transparent;
+          border: 0;
+        }
+        pre {
+          border: 1px solid rgba(0, 0, 0, 0.07);
+          padding: 16px;
+          overflow: auto;
+          font-size: 85%;
+          line-height: 1.45;
+          background-color: #f7f7f7;
+          word-wrap: normal;
+        }
+        pre code {
+          display: inline;
+          max-width: initial;
+          padding: 0;
+          margin: 0;
+          overflow: initial;
+          line-height: inherit;
+          word-wrap: noraml;
+          background-color: transparent;
+          border: 0;
+        }
+        pre code:before, pre code:after {
+          content: normal;
+        }
+
+        img {
+          border: 0px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          outline: 0px;
+          display: block;
+          width: 20px !important;
+          visibility: visible !important;
+          height: auto !important;
+        }
+
+        ul>ul {
+          list-style-type: square;
+        }
+
+        table {
+          width: 100%;
+          overflow: auto;
+          text-align: center;
+        }
+        table th {
+          font-weight: normal;
+        }
+        table th, table td {
+          padding: 6px 13px;
+          border: 1px solid #ddd;
+        }
+        table tr {
+          background-color: #fff;
+          border-top: 1px solid #ccc;
+        }
+        table tr:nth-child(2n) {
+          background-color: #f8f8f8;
+        }
     }
     .completed {
       color: #d9d9d9;

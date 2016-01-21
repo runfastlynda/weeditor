@@ -47,6 +47,16 @@ body {
         box-sizing: border-box;
         float: left;
         border: 1px solid #ccc;
+        ul{
+            li {
+                list-style: none;
+                padding-left: 10px;
+                margin-top: 10px;
+                label {
+                    padding-left: 5px;
+                }
+            }
+        }
     }
     #center {
         width: 42%;

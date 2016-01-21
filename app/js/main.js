@@ -5,3 +5,9 @@ new Vue({
     }
   }
 });
+new Vue({
+  el: '.main',
+  data: {
+    input: '#hello'
+  }
+})

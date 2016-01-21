@@ -6,6 +6,7 @@
         <title>weeditor</title>
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+        <script src="js/marked.min.js"></script>
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
@@ -24,7 +25,7 @@
             <div id="center">
                 <textarea v-model="input"></textarea>
             </div>
-            <div id="right" v-html="input">
+            <div id="right" v-html="input | marked">
             </div>
         </div>
 
@@ -44,6 +45,9 @@
               el: '.main',
               data: {
                 input: '#hello'
+              },
+              filters: {
+                marked: marked
               }
             })
         </script>

@@ -59,9 +59,11 @@ body {
     }
     #right {
         width: 42%;
+        box-sizing: border-box;
         height: 100%;
         float: left;
-        background: yellow;
+        padding: 20px;
+        border: 1px solid #ccc;
     }
     .completed {
       color: #d9d9d9;

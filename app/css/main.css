@@ -21,17 +21,18 @@ html {
 body {
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  font-family: Avenir, sans-serif; }
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; }
 
 .banner {
   width: 100%;
-  height: 5%;
+  height: 40px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 16px; }
 
 .main {
   width: 100%;
@@ -43,7 +44,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     float: left;
-    border: 1px solid #ccc; }
+    background-color: #eee; }
     .main #left ul li {
       list-style: none;
       padding-left: 10px;
@@ -57,21 +58,27 @@ body {
     box-sizing: border-box; }
     .main #center textarea {
       width: 100%;
-      height: 100%;
+      box-sizing: border-box;
+      min-height: 100%;
+      height: auto;
       outline: none;
-      border: 1px solid #ccc; }
+      border: 1px solid #ddd;
+      font-size: 18px;
+      padding: 20px; }
   .main #right {
     width: 42%;
     box-sizing: border-box;
     height: 100%;
     float: left;
     padding: 20px;
-    border: 1px solid #ccc;
-    font-size: 18px; }
+    border: 1px solid #ddd;
+    border-left: none;
+    font-size: 18px;
+    overflow: scroll; }
     .main #right h1 {
       font-size: 1.3em;
-      margin-bottom: 12px;
-      margin-top: 12px;
+      margin-bottom: 14px;
+      margin-top: 14px;
       padding-top: 2px;
       outline: 0px;
       font-weight: normal;
@@ -79,8 +86,8 @@ body {
       color: #333333; }
     .main #right h2 {
       font-size: 1.2em;
-      margin-bottom: 12px;
-      margin-top: 12px;
+      margin-bottom: 14px;
+      margin-top: 14px;
       padding-top: 2px;
       outline: 0px;
       line-height: 1.1em;
@@ -88,8 +95,8 @@ body {
       color: #333333; }
     .main #right h3 {
       font-size: 1.2em;
-      margin-bottom: 12px;
-      margin-top: 12px;
+      margin-bottom: 14px;
+      margin-top: 14px;
       padding-top: 2px;
       outline: 0px;
       font-weight: normal;
@@ -109,8 +116,8 @@ body {
       border-bottom-style: solid;
       border-bottom-color: #eaeaea;
       font-size: 1em;
-      margin-bottom: 5px;
-      padding-top: 10px;
+      margin-bottom: 6px;
+      padding-top: 6px;
       padding-bottom: 5px;
       outline: 0px;
       line-height: 1.1em;
@@ -120,15 +127,23 @@ body {
       border-width: 0px 0px 1px;
       border-bottom-style: solid;
       border-bottom-color: #eaeaea;
-      font-size: 0.8em;
-      margin-bottom: 5px;
-      padding-top: 10px;
+      font-size: 0.9em;
+      margin-bottom: 6px;
+      padding-top: 6px;
       padding-bottom: 5px;
       outline: 0px;
       line-height: 1.1em;
       color: #aaaaaa;
       font-weight: normal; }
+    .main #right p {
+      margin: 1em 0; }
     .main #right ul {
+      font-size: 18px;
+      margin: 0.8em 1em;
+      padding-left: 0.8em;
+      outline: 0px;
+      color: #333333; }
+    .main #right ol {
       font-size: 18px;
       margin: 0.8em 1em;
       padding-left: 0.8em;
@@ -152,15 +167,15 @@ body {
       outline: 0px;
       color: #252525; }
     .main #right blockquote {
-      border-width: 0px 0px 0px 0.4em;
+      border-width: 0px 0px 0px 5px;
       border-left-color: #dddddd;
       font-size: 18px;
-      margin-top: 2px;
-      margin-bottom: 22px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       outline: 0px;
       quotes: none;
       color: #333333;
-      padding-left: 5px; }
+      padding-left: 10px; }
     .main #right code {
       padding: 0;
       padding-top: 0.2em;
@@ -174,13 +189,14 @@ body {
       content: "\00a0"; }
     .main #right pre > code {
       padding: 0;
-      margin: 0;
+      margin: 10px 0;
       font-size: 100%;
       white-space: pre;
       background: transparent;
       border: 0; }
     .main #right pre {
       border: 1px solid rgba(0, 0, 0, 0.07);
+      margin: 10px 0;
       padding: 16px;
       overflow: auto;
       font-size: 85%;
@@ -205,7 +221,7 @@ body {
       padding-bottom: 10px;
       outline: 0px;
       display: block;
-      width: 20px !important;
+      width: auto !important;
       visibility: visible !important;
       height: auto !important; }
     .main #right ul > ul {

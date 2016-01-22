@@ -22,18 +22,19 @@ html {
 body {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
-    font-family: Avenir, sans-serif;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
 }
 
 .banner{
     width: 100%;
-    height: 5%;
+    height: 40px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     background-color: #fff;
+    padding-top: 16px;
 }
 
 .main {
@@ -46,7 +47,7 @@ body {
         height: 100%;
         box-sizing: border-box;
         float: left;
-        border: 1px solid #ccc;
+        background-color: #eee;
         ul{
             li {
                 list-style: none;
@@ -65,9 +66,13 @@ body {
         box-sizing: border-box;
         textarea{
             width: 100%;
-            height: 100%;
+            box-sizing: border-box;
+            min-height: 100%;
+            height: auto;
             outline: none;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            padding: 20px; 
         }
     }
     #right {
@@ -76,12 +81,14 @@ body {
         height: 100%;
         float: left;
         padding: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
+        border-left: none;
         font-size: 18px;
+        overflow: scroll;
         h1 {
           font-size: 1.3em;
-          margin-bottom: 12px;
-          margin-top: 12px;
+          margin-bottom: 14px;
+          margin-top: 14px;
           padding-top: 2px;
           outline: 0px;
           font-weight: normal;
@@ -91,8 +98,8 @@ body {
 
         h2 {
           font-size: 1.2em;
-          margin-bottom: 12px;
-          margin-top: 12px;
+          margin-bottom: 14px;
+          margin-top: 14px;
           padding-top: 2px;
           outline: 0px;
           line-height: 1.1em;
@@ -102,8 +109,8 @@ body {
 
         h3 {
           font-size: 1.2em;
-          margin-bottom: 12px;
-          margin-top: 12px;
+          margin-bottom: 14px;
+          margin-top: 14px;
           padding-top: 2px;
           outline: 0px;
           font-weight: normal;
@@ -128,8 +135,8 @@ body {
           border-bottom-style: solid;
           border-bottom-color: rgb(234, 234, 234);
           font-size: 1em;
-          margin-bottom: 5px;
-          padding-top: 10px;
+          margin-bottom: 6px;
+          padding-top: 6px;
           padding-bottom: 5px;
           outline: 0px;
           line-height: 1.1em;
@@ -141,9 +148,9 @@ body {
           border-width: 0px 0px 1px;
           border-bottom-style: solid;
           border-bottom-color: rgb(234, 234, 234);
-          font-size: 0.8em;
-          margin-bottom: 5px;
-          padding-top: 10px;
+          font-size: 0.9em;
+          margin-bottom: 6px;
+          padding-top: 6px;
           padding-bottom: 5px;
           outline: 0px;
           line-height: 1.1em;
@@ -151,7 +158,18 @@ body {
           font-weight: normal;
         }
 
+        p{
+          margin: 1em 0;
+        }
+
         ul {
+          font-size: 18px;
+          margin: 0.8em 1em;
+          padding-left: 0.8em;
+          outline: 0px;color: rgb(51, 51, 51);
+        }
+
+        ol {
           font-size: 18px;
           margin: 0.8em 1em;
           padding-left: 0.8em;
@@ -182,15 +200,15 @@ body {
         }
 
         blockquote {
-          border-width: 0px 0px 0px 0.4em;
+          border-width: 0px 0px 0px 5px;
           border-left-color: rgb(221, 221, 221);
           font-size: 18px;
-          margin-top: 2px;
-          margin-bottom: 22px;
+          margin-top: 10px;
+          margin-bottom: 10px;
           outline: 0px;
           quotes: none;
           color: rgb(51, 51, 51);
-          padding-left: 5px;
+          padding-left: 10px;
         }
 
         code {
@@ -208,7 +226,7 @@ body {
         }
         pre > code {
           padding: 0;
-          margin: 0;
+          margin: 10px 0;
           font-size: 100%;
           white-space: pre;
           background: transparent;
@@ -216,6 +234,7 @@ body {
         }
         pre {
           border: 1px solid rgba(0, 0, 0, 0.07);
+          margin: 10px 0;
           padding: 16px;
           overflow: auto;
           font-size: 85%;
@@ -244,7 +263,7 @@ body {
           padding-bottom: 10px;
           outline: 0px;
           display: block;
-          width: 20px !important;
+          width: auto!important;
           visibility: visible !important;
           height: auto !important;
         }

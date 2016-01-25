@@ -24,6 +24,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    overflow: hidden;
 }
 
 .banner{
@@ -46,7 +47,7 @@ body {
         height: 100%;
         box-sizing: border-box;
         float: left;
-        border: 1px solid #ccc;
+        background-color: #eee;
         ul{
             li {
                 list-style: none;
@@ -66,8 +67,11 @@ body {
         textarea{
             width: 100%;
             height: 100%;
+            box-sizing: border-box;
             outline: none;
+            font-size: 18px;
             border: 1px solid #ccc;
+            padding: 20px;
         }
     }
     #right {
@@ -77,201 +81,207 @@ body {
         float: left;
         padding: 20px;
         border: 1px solid #ccc;
-        font-size: 18px;
-        h1 {
-          font-size: 1.3em;
-          margin-bottom: 12px;
-          margin-top: 12px;
-          padding-top: 2px;
-          outline: 0px;
-          font-weight: normal;
-          line-height: 1.3em;
-          color: rgb(51, 51, 51);
+        border-left: none;
+        font-size:10pt;
+        overflow:scroll;
+        strong {
+            color:#252525;
         }
 
-        h2 {
-          font-size: 1.2em;
-          margin-bottom: 12px;
-          margin-top: 12px;
-          padding-top: 2px;
-          outline: 0px;
-          line-height: 1.1em;
-          font-weight: normal;
-          color: rgb(51, 51, 51);
-        }
-
-        h3 {
-          font-size: 1.2em;
-          margin-bottom: 12px;
-          margin-top: 12px;
-          padding-top: 2px;
-          outline: 0px;
-          font-weight: normal;
-          line-height: 1.1em;
-          color: rgb(234, 76, 137);
+        a {
+            color:#399FC3;
+            text-decoration:none;
+            font-weight: normal;
+            /*this elimitantes downscaling caused by long links*/
+            overflow: hidden;
+            text-overflow:ellipsis; /*溢出的内容以何种形式提醒用户*/
+            
         }
 
 
-        h4 {
-        font-size: 1.1em;
-        margin-bottom: 12px;
-        margin-top: 12px;
-        padding-top: 2px;
-        outline: 0px;
-        line-height: 1.1em;
-        font-weight: normal;
-        color: rgb(51, 155, 203);
+        a:link:after, a:visited:after { 
+            color:#999;
+            font-weight: 400;
+            font-style: italic;
+            content:" " attr(href) " "; 
+            font-size: 84%;
+            word-break: break-all; /*允许在单词内换行*/
+            word-wrap: break-word; /*允许长单词换行到下一行*/
         }
 
-        h5 {
-          border-width: 0px 0px 1px;
-          border-bottom-style: solid;
-          border-bottom-color: rgb(234, 234, 234);
-          font-size: 1em;
-          margin-bottom: 5px;
-          padding-top: 10px;
-          padding-bottom: 5px;
-          outline: 0px;
-          line-height: 1.1em;
-          font-weight: normal;
-          color: rgb(153, 153, 153);
+        a[href^="javascript:"]:after,
+        a[href^="dayone:"]:after,
+        a[href^="tel:"]:after,
+        a[href^="mailto:"]:after,
+        a[href^="twitter:"]:after,
+        a[href^="#"]:after {
+            content: "";
         }
 
-        h6 {
-          border-width: 0px 0px 1px;
-          border-bottom-style: solid;
-          border-bottom-color: rgb(234, 234, 234);
-          font-size: 0.8em;
-          margin-bottom: 5px;
-          padding-top: 10px;
-          padding-bottom: 5px;
-          outline: 0px;
-          line-height: 1.1em;
-          color: rgb(170, 170, 170);
-          font-weight: normal;
+        li {
+            overflow:visible;
         }
 
-        ul {
-          font-size: 18px;
-          margin: 0.8em 1em;
-          padding-left: 0.8em;
-          outline: 0px;color: rgb(51, 51, 51);
+        a:hover {
+            color:#EA4C89;
         }
 
         hr {
-          border-right-width: 0px;
-          border-bottom-width: 0px;
-          border-left-width: 0px;
-          border-top-style: solid;
-          border-top-color: rgb(234, 234, 234);
-          height: 1px;
-          margin-top: 1em;
-          margin-bottom: 1em;
-          color: rgb(51, 51, 51);
-          font-size: 18px;
+            border:0;
+            border-top:1pt solid #eaeaea;
+            display:block;
+            height:1px;
+            margin:1em 0;
+            padding:0;
         }
 
-        s {
-          text-decoration:line-through;
+
+        h1 {
+            font-size: 1.3em;
+            font-weight: bold;
+            line-height: 1.3em;
+
+            padding-top: 16px;
+            margin-bottom: 4px;
         }
 
-        strong {
-          border: 0px;
-          outline: 0px;
-          color: rgb(37, 37, 37);
+
+        h2, h3, h4, h5, h6 {
+          line-height: 1.1em;
+          padding-top: 16px;
+          margin-bottom: 4px;
         }
 
-        blockquote {
-          border-width: 0px 0px 0px 0.4em;
-          border-left-color: rgb(221, 221, 221);
-          font-size: 18px;
-          margin-top: 2px;
-          margin-bottom: 22px;
-          outline: 0px;
-          quotes: none;
-          color: rgb(51, 51, 51);
-          padding-left: 5px;
+
+        h2 {
+            font-size: 1.1em;
+            font-weight: bold;
         }
 
-        code {
-          padding: 0;
-          padding-top: 0.2em;
-          padding-bottom: 0.2em;
-          margin: 0;
-          font-size: 85%;
-          background-color: #f7f7f7;
-          border-radius: 3px;
+        h3 {
+          font-weight: normal;
+          color: #ea4c89;
+          font-size: 1em;
         }
-        code:before, code:after {
-          letter-spacing: -0.2em;
-          content: "\00a0";
+
+        h4 {
+          font-weight: normal;
+          color: #999;
+          text-transform: uppercase;
+          font-size: 1.1em;
         }
-        pre > code {
-          padding: 0;
-          margin: 0;
-          font-size: 100%;
-          white-space: pre;
-          background: transparent;
-          border: 0;
+
+        h5, h6 {
+          font-size: .8em;
         }
-        pre {
-          border: 1px solid rgba(0, 0, 0, 0.07);
-          padding: 16px;
-          overflow: auto;
-          font-size: 85%;
-          line-height: 1.45;
-          background-color: #f7f7f7;
-          word-wrap: normal;
+
+        h5 {
+          color: #339BCB;
+          font-weight: bold;
+          text-transform: uppercase;
         }
-        pre code {
-          display: inline;
-          max-width: initial;
-          padding: 0;
-          margin: 0;
-          overflow: initial;
-          line-height: inherit;
-          word-wrap: noraml;
-          background-color: transparent;
-          border: 0;
+
+        h6 {
+          font-weight: normal;
+          color: #AAA;
         }
-        pre code:before, pre code:after {
-          content: normal;
+
+
+        dl,ol,ul,p,blockquote,pre {
+            margin-top:7pt;
+            margin-bottom:7pt;
+        }
+
+        img.header {
+            max-width:340pt;
+            margin-left: -20pt;
+            margin-top:8pt;
+            margin-bottom:9pt;
+            display:block;
         }
 
         img {
-          border: 0px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          outline: 0px;
-          display: block;
-          width: 20px !important;
-          visibility: visible !important;
-          height: auto !important;
+            max-width:300pt;
+            margin-top:8pt;
+            margin-bottom:9pt;
+            display:block;
         }
 
-        ul>ul {
-          list-style-type: square;
+        ol,ul {
+            padding-left:12pt;
+            margin:8pt 0;
         }
+
+        ol ol,ol ul,ul ol,ul ul {
+            margin:3pt 0;
+        }
+
+        blockquote { 
+            border-left: solid 4pt #ddd; 
+            padding-left: 7pt; 
+            quotes: none; 
+        }
+
+        pre, code, tt {
+            font: 9pt 'Bitstream Vera Sans Mono', Courier New, monospace;
+        }
+
+        pre {
+            background-color: #FFF;
+            border: #E8E8E8 1pt solid;
+            color: black;
+            display: block;
+            margin: 9pt 0;
+            overflow: auto;
+            padding: 3pt 7pt;
+            white-space: pre-wrap;
+            word-wrap:break-word;
+            cursor:text;
+            max-width:260pt;
+            overflow:auto;
+            border-radius:3pt;
+            -webkit-border-radius:3pt;
+        }
+        code { 
+            color: #2c92b0;
+            border: 1px solid #E8E8E8;
+            font-size: 9pt;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+        }
+
+        pre code {
+            font-size: 9pt;
+            padding: 0!important;
+            background-color: #FFF;
+            border: none!important;
+            overflow:visible;
+        }
+
+        /* Tables */
 
         table {
-          width: 100%;
-          overflow: auto;
-          text-align: center;
+          width:100%;
+          border-collapse:collapse;
+          display: table-header-group;
         }
-        table th {
-          font-weight: normal;
+
+        th, td {
+          text-align:left;
+          padding:5px 10px;
+          border-bottom:1px solid #e5e5e5;
         }
-        table th, table td {
-          padding: 6px 13px;
-          border: 1px solid #ddd;
+
+        dt {
+          color:#444;
+          font-weight:700;
         }
-        table tr {
-          background-color: #fff;
-          border-top: 1px solid #ccc;
+
+        th {
+          color:#444;
         }
-        table tr:nth-child(2n) {
-          background-color: #f8f8f8;
-        }
+
     }
     .completed {
       color: #d9d9d9;

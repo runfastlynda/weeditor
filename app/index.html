@@ -7,10 +7,12 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
         <script src="js/marked.min.js"></script>
+        <script src="js/jquery.min.js"></script>
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
-            banner
+          <span>weeditor</span>
+          <span id="save">save</span>
         </div>
         <div class="main clearfix">
             <div id="left" class="">
@@ -23,7 +25,7 @@
                 </div>
             </div>
             <div id="center">
-                <textarea v-model="input"></textarea>
+                <textarea id="markdown" v-model="input"></textarea>
             </div>
             <div id="right" v-html="input | marked">
             </div>

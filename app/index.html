@@ -13,6 +13,10 @@
         <div class="banner clearfix"  v-on:click="toggle">
           <span class="name">weeditor</span>
           <p id="save">save</p>
+          <select id="selector">
+            <option selected>DayoneX</option>
+            <option>Dayone</option>
+          </select>
         </div>
         <div class="main clearfix">
             <div id="left" class="">
@@ -27,7 +31,7 @@
             <div id="center">
                 <textarea id="markdown" v-model="input"></textarea>
             </div>
-            <div id="right" v-html="input | marked">
+            <div id="right" class="DayoneX" v-html="input | marked">
             </div>
         </div>
 

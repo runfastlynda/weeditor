@@ -48,10 +48,12 @@ body {
   .banner #save {
     float: right;
     border: 1px solid #3D4652;
-    padding: 3px 5px;
+    padding: 4px 10px;
     margin-right: 20px; }
   .banner #save:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #3D4652;
+    color: #fff; }
 
 .main {
   width: 100%;

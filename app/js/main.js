@@ -11,15 +11,6 @@ $(document).ready(function( ) {
     setStorage();
   };
 
-  $('#save').on('click',function(){
-    populateStorage();
-    if(localStorage.getItem('page')){
-      alert("文章已保存");
-    }else{
-      alert("文章未保存");
-    }
-  })
-
   function populateStorage() {
     localStorage.setItem('page', $('#markdown').val());
   };
@@ -34,5 +25,23 @@ $(document).ready(function( ) {
     $('#right').removeClass();
     $('#right').addClass(selector);
   });
+
+  function alertMessage(s) {
+    $("#message").html(s);
+    $("#message").show();
+    setTimeout(function() {
+      $("#message").hide();
+    }, 3000);
+  };
+
+  $('#save').on('click',function(){
+    populateStorage();
+    if(localStorage.getItem('page')){
+      alertMessage("保存成功");
+    }else{
+      alertMessage("未保存成功");
+    }
+  });
+
 
 });

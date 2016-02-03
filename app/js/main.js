@@ -13,11 +13,15 @@ $(document).ready(function( ) {
 
   $('#save').on('click',function(){
     populateStorage();
+    if(localStorage.getItem('page')){
+      alert("文章已保存");
+    }else{
+      alert("文章未保存");
+    }
   })
 
   function populateStorage() {
     localStorage.setItem('page', $('#markdown').val());
-    console.log(localStorage.getItem('page'));
   };
 
   function setStorage() {
@@ -27,8 +31,8 @@ $(document).ready(function( ) {
 
   $('#selector').on('change',function(){
     var selector = $('#selector').find("option:selected").text();
-    console.log(selector);
     $('#right').removeClass();
     $('#right').addClass(selector);
   });
+
 });

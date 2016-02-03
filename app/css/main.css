@@ -426,3 +426,23 @@ body {
   .main .completed {
     color: #d9d9d9;
     text-decoration: line-through; }
+
+#message {
+  position: absolute;
+  top: 200px;
+  left: 35%;
+  margin: 0 auto;
+  width: 300px;
+  padding: 40px;
+  background: #EA6C6C;
+  display: none;
+  font-size: 1.5em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: #fff;
+  text-align: center; }

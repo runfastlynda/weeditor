@@ -147,14 +147,14 @@ body {
 
 
       h4 {
-      font-size: 1.1em;
-      margin-bottom: 12px;
-      margin-top: 12px;
-      padding-top: 2px;
-      outline: 0px;
-      line-height: 1.1em;
-      font-weight: normal;
-      color: rgb(51, 155, 203);
+        font-size: 1.1em;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        padding-top: 2px;
+        outline: 0px;
+        line-height: 1.1em;
+        font-weight: bold;
+        color: rgb(51, 155, 203);
       }
 
       h5 {
@@ -182,11 +182,16 @@ body {
         outline: 0px;
         line-height: 1.1em;
         color: rgb(170, 170, 170);
-        font-weight: normal;
+        font-weight: bold;
       }
 
       p{
         margin: 1em 0;
+      }
+
+      a {
+          color: #47B1C7;
+          text-decoration: none;
       }
 
       ul {
@@ -227,9 +232,8 @@ body {
       }
 
       blockquote {
-        border-width: 0px 0px 0px 5px;
-        border-left-color: rgb(221, 221, 221);
-        font-size: 18px;
+        border-left: solid .4em rgb(221, 221, 221);
+        font-size: 16px;
         margin-top: 10px;
         margin-bottom: 10px;
         outline: 0px;
@@ -240,8 +244,8 @@ body {
 
       code {
         padding: 0;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
         margin: 0;
         font-size: 85%;
         background-color: #f7f7f7;
@@ -253,7 +257,7 @@ body {
       }
       pre > code {
         padding: 0;
-        margin: 10px 0;
+        margin: 5px 0;
         font-size: 100%;
         white-space: pre;
         background: transparent;
@@ -261,8 +265,8 @@ body {
       }
       pre {
         border: 1px solid rgba(0, 0, 0, 0.07);
-        margin: 10px 0;
-        padding: 16px;
+        margin: 5px 0;
+        padding: 10px;
         overflow: auto;
         font-size: 85%;
         line-height: 1.45;

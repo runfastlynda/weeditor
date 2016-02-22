@@ -130,7 +130,7 @@ body {
     padding-top: 2px;
     outline: 0px;
     line-height: 1.1em;
-    font-weight: normal;
+    font-weight: bold;
     color: #339bcb; }
   .main .DayoneX h5 {
     border-width: 0px 0px 1px;
@@ -155,9 +155,12 @@ body {
     outline: 0px;
     line-height: 1.1em;
     color: #aaaaaa;
-    font-weight: normal; }
+    font-weight: bold; }
   .main .DayoneX p {
     margin: 1em 0; }
+  .main .DayoneX a {
+    color: #47B1C7;
+    text-decoration: none; }
   .main .DayoneX ul {
     font-size: 18px;
     margin: 0.8em 1em;
@@ -188,9 +191,8 @@ body {
     outline: 0px;
     color: #252525; }
   .main .DayoneX blockquote {
-    border-width: 0px 0px 0px 5px;
-    border-left-color: #dddddd;
-    font-size: 18px;
+    border-left: solid 0.4em #dddddd;
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     outline: 0px;
@@ -199,8 +201,8 @@ body {
     padding-left: 10px; }
   .main .DayoneX code {
     padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
     margin: 0;
     font-size: 85%;
     background-color: #f7f7f7;
@@ -210,15 +212,15 @@ body {
     content: "\00a0"; }
   .main .DayoneX pre > code {
     padding: 0;
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 100%;
     white-space: pre;
     background: transparent;
     border: 0; }
   .main .DayoneX pre {
     border: 1px solid rgba(0, 0, 0, 0.07);
-    margin: 10px 0;
-    padding: 16px;
+    margin: 5px 0;
+    padding: 10px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;

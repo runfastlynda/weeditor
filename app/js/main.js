@@ -43,5 +43,6 @@ $(document).ready(function( ) {
     }
   });
 
+  $('#markdown').focus();
 
 });

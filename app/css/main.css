@@ -45,6 +45,11 @@ body {
     text-transform: uppercase;
     color: #3D4652;
     margin-left: 150px; }
+  .banner a {
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 30px; }
   .banner #save {
     float: right;
     border: 1px solid #3D4652;

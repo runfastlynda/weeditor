@@ -36,8 +36,13 @@ $(document).ready(function( ) {
 
   $('#save').on('click',function(){
     populateStorage();
+
+    var myDate = new Date();
+    var mytime=myDate.toLocaleTimeString();
+    // var mydate=myDate.toLocaleString( );
+
     if(localStorage.getItem('page')){
-      alertMessage("保存成功");
+      alertMessage(mytime+" 保存成功 ");
     }else{
       alertMessage("未保存成功");
     }

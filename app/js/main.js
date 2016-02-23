@@ -39,7 +39,6 @@ $(document).ready(function( ) {
 
     var myDate = new Date();
     var mytime=myDate.toLocaleTimeString();
-    // var mydate=myDate.toLocaleString( );
 
     if(localStorage.getItem('page')){
       alertMessage(mytime+" 保存成功 ");
@@ -49,5 +48,18 @@ $(document).ready(function( ) {
   });
 
   $('#markdown').focus();
+
+  $('#more').on('click',function(){
+    $('#left').toggle(100);
+    if($('#right').is('.scrollin')){
+      $('#right').removeClass('scrollin');
+      $('#center').removeClass('scrollin');
+      $('#more').removeClass('less');
+    }else{
+      $('#right').addClass('scrollin');
+      $('#center').addClass('scrollin');
+      $('#more').addClass('less');
+    }
+  })
 
 });

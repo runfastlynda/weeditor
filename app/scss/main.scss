@@ -37,10 +37,15 @@ body {
     padding-top: 16px;
     text-align: center;
     background-color:  #D4DBE3;
+    img {
+        width: 30px;
+        float: left;
+        margin-left: 20px;
+    }
     select {
-      float: right;
-      margin-right: 20px;
-      margin-top: 5px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 5px;
     }
     .name {
         font-size: 20px;
@@ -76,6 +81,7 @@ body {
     #left {
         width: 16%;
         height: 100%;
+        display: none;
         box-sizing: border-box;
         float: left;
         background-color: #eee;
@@ -91,7 +97,7 @@ body {
         }
     }
     #center {
-        width: 42%;
+        width: 50%;
         height: 100%;
         float: left;
         box-sizing: border-box;
@@ -107,7 +113,7 @@ body {
         }
     }
     #right {
-        width: 42%;
+        width: 50%;
         box-sizing: border-box;
         height: 100%;
         float: left;
@@ -575,6 +581,16 @@ body {
         color: #d9d9d9;
         text-decoration: line-through;
     }
+}
+
+.scrollin {
+    width: 42% !important; 
+}
+
+.less {
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 
 #message {

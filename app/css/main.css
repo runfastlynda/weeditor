@@ -35,6 +35,10 @@ body {
   padding-top: 16px;
   text-align: center;
   background-color: #D4DBE3; }
+  .banner img {
+    width: 30px;
+    float: left;
+    margin-left: 20px; }
   .banner select {
     float: right;
     margin-right: 20px;
@@ -45,6 +49,11 @@ body {
     text-transform: uppercase;
     color: #3D4652;
     margin-left: 150px; }
+  .banner a {
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 30px; }
   .banner #save {
     float: right;
     border: 1px solid #3D4652;
@@ -63,6 +72,7 @@ body {
   .main #left {
     width: 16%;
     height: 100%;
+    display: none;
     box-sizing: border-box;
     float: left;
     background-color: #eee; }
@@ -73,7 +83,7 @@ body {
       .main #left ul li label {
         padding-left: 5px; }
   .main #center {
-    width: 42%;
+    width: 50%;
     height: 100%;
     float: left;
     box-sizing: border-box; }
@@ -87,7 +97,7 @@ body {
       font-size: 18px;
       padding: 20px; }
   .main #right {
-    width: 42%;
+    width: 50%;
     box-sizing: border-box;
     height: 100%;
     float: left;
@@ -130,7 +140,7 @@ body {
     padding-top: 2px;
     outline: 0px;
     line-height: 1.1em;
-    font-weight: normal;
+    font-weight: bold;
     color: #339bcb; }
   .main .DayoneX h5 {
     border-width: 0px 0px 1px;
@@ -155,9 +165,12 @@ body {
     outline: 0px;
     line-height: 1.1em;
     color: #aaaaaa;
-    font-weight: normal; }
+    font-weight: bold; }
   .main .DayoneX p {
     margin: 1em 0; }
+  .main .DayoneX a {
+    color: #47B1C7;
+    text-decoration: none; }
   .main .DayoneX ul {
     font-size: 18px;
     margin: 0.8em 1em;
@@ -188,9 +201,8 @@ body {
     outline: 0px;
     color: #252525; }
   .main .DayoneX blockquote {
-    border-width: 0px 0px 0px 5px;
-    border-left-color: #dddddd;
-    font-size: 18px;
+    border-left: solid 0.4em #dddddd;
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     outline: 0px;
@@ -199,26 +211,27 @@ body {
     padding-left: 10px; }
   .main .DayoneX code {
     padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     margin: 0;
-    font-size: 85%;
+    font-size: 88%;
     background-color: #f7f7f7;
-    border-radius: 3px; }
+    border-radius: 3px;
+    margin: 0 0.3em; }
   .main .DayoneX code:before, .main .DayoneX code:after {
-    letter-spacing: -0.2em;
+    letter-spacing: -0.4em;
     content: "\00a0"; }
   .main .DayoneX pre > code {
     padding: 0;
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 100%;
     white-space: pre;
     background: transparent;
     border: 0; }
   .main .DayoneX pre {
     border: 1px solid rgba(0, 0, 0, 0.07);
-    margin: 10px 0;
-    padding: 16px;
+    margin: 5px 0;
+    padding: 10px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
@@ -426,6 +439,14 @@ body {
   .main .completed {
     color: #d9d9d9;
     text-decoration: line-through; }
+
+.scrollin {
+  width: 42% !important; }
+
+.less {
+  transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); }
 
 #message {
   position: absolute;

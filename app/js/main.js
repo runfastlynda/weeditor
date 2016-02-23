@@ -36,12 +36,30 @@ $(document).ready(function( ) {
 
   $('#save').on('click',function(){
     populateStorage();
+
+    var myDate = new Date();
+    var mytime=myDate.toLocaleTimeString();
+
     if(localStorage.getItem('page')){
-      alertMessage("保存成功");
+      alertMessage(mytime+" 保存成功 ");
     }else{
       alertMessage("未保存成功");
     }
   });
 
+  $('#markdown').focus();
+
+  $('#more').on('click',function(){
+    $('#left').toggle(100);
+    if($('#right').is('.scrollin')){
+      $('#right').removeClass('scrollin');
+      $('#center').removeClass('scrollin');
+      $('#more').removeClass('less');
+    }else{
+      $('#right').addClass('scrollin');
+      $('#center').addClass('scrollin');
+      $('#more').addClass('less');
+    }
+  })
 
 });

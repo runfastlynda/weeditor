@@ -11,8 +11,10 @@
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
+          <img id="more" src="img/more.png" alt="">
           <span class="name">weeditor</span>
           <p id="save">save</p>
+          <a href="http://wowubuntu.com/markdown/" target="_blank">Markdown帮助文档</a>
           <select id="selector">
             <option selected>DayoneX</option>
             <option>Dayone</option>
@@ -61,7 +63,7 @@
             new Vue({
               el: '.main',
               data: {
-                input: '#hello'
+                input: ''
               },
               filters: {
                 marked: marked

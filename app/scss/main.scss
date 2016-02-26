@@ -335,6 +335,33 @@ body {
       table tr:nth-child(2n) {
         background-color: #f8f8f8;
       }
+      .preface {
+        background: #f6f6f6;
+        font-size: 15px;
+        padding: 12px;
+        margin: 15px 0;
+        position: relative;
+        border-radius: 5px;
+
+        p {
+            margin: 12px 0;
+        }
+      }
+      .preface_blue {
+        background: #DCEDF6;
+      }
+      .preface_red {
+        background: #EFDFDF;
+      }
+      .preface_green {
+        background: #E2EED8;
+      }
+      .preface_yellow {
+        background: #FCF7E4;
+      }
+      .preface_white {
+        background: #e7e7eb;
+      }
     }
     .Dayone {
         img {

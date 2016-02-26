@@ -9,16 +9,16 @@ $(document).ready(function( ) {
     populateStorage();
   } else {
     setStorage();
-  };
+  }
 
   function populateStorage() {
     localStorage.setItem('page', $('#markdown').val());
-  };
+  }
 
   function setStorage() {
     var currentPage = localStorage.getItem('page');
     $('#markdown').val(currentPage);
-  };
+  }
 
   $('#selector').on('change',function(){
     var selector = $('#selector').find("option:selected").text();
@@ -32,7 +32,7 @@ $(document).ready(function( ) {
     setTimeout(function() {
       $("#message").hide();
     }, 3000);
-  };
+  }
 
   $('#save').on('click',function(){
     populateStorage();
@@ -60,6 +60,6 @@ $(document).ready(function( ) {
       $('#center').addClass('scrollin');
       $('#more').addClass('less');
     }
-  })
+  });
 
 });

@@ -280,7 +280,8 @@ body {
     padding: 12px;
     margin: 15px 0;
     position: relative;
-    border-radius: 5px; }
+    border-radius: 5px;
+    border-left: none; }
     .main .DayoneX .preface p {
       margin: 12px 0; }
   .main .DayoneX .preface_blue {

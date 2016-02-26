@@ -274,6 +274,25 @@ body {
     border-top: 1px solid #ccc; }
   .main .DayoneX table tr:nth-child(2n) {
     background-color: #f8f8f8; }
+  .main .DayoneX .preface {
+    background: #f6f6f6;
+    font-size: 15px;
+    padding: 12px;
+    margin: 15px 0;
+    position: relative;
+    border-radius: 5px; }
+    .main .DayoneX .preface p {
+      margin: 12px 0; }
+  .main .DayoneX .preface_blue {
+    background: #DCEDF6; }
+  .main .DayoneX .preface_red {
+    background: #EFDFDF; }
+  .main .DayoneX .preface_green {
+    background: #E2EED8; }
+  .main .DayoneX .preface_yellow {
+    background: #FCF7E4; }
+  .main .DayoneX .preface_white {
+    background: #e7e7eb; }
   .main .Dayone {
     /* STYLES */
     /* HEADERS */

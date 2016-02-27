@@ -22,6 +22,13 @@
         </div>
         <div class="main clearfix">
             <div id="left" class="">
+                <label class="inset">插入</label>
+                <select id="end">
+                  <option></option>
+                  <option>-完-</option>
+                  <option>-待续-</option>
+                  <option>原创第几篇</option>
+                </select>
                 <div id="checklist">
                     <ul>
                         <li class="todo-item" v-for="todo in todos" :class="{ completed: todo.completed }">
@@ -55,7 +62,6 @@
                   { item: '文章原创篇数' },
                   { item: '代码距离' },
                   { item: '图片距离' },
-                  { item: '文章结尾(-完-，-待续-)' },
                   { item: '你还可以看' },
                   { item: '参考引用' },
                   { item: '文末关注Logo图' },

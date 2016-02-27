@@ -94,6 +94,8 @@ body {
         height: 24px; }
     .main #left ul #list {
       padding: 0; }
+    .main #left .inset {
+      margin: 0 0 0 10px; }
   .main #center {
     width: 50%;
     height: 100%;

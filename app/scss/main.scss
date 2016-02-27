@@ -95,6 +95,25 @@ body {
                 }
             }
         }
+        .switchlist {
+            width: 210px;
+            margin: 20px auto;
+            .inputlink {
+                height: 20px;
+                width: 160px;
+                outline:none;
+            }
+            .switchshort {
+                width: 40px;
+                height: 24px;
+            }
+        }
+        ul {
+            #list {
+                padding: 0; 
+            }
+        }
+        
     }
     #center {
         width: 50%;
@@ -109,7 +128,8 @@ body {
             outline: none;
             border: 1px solid #ddd;
             font-size: 18px;
-            padding: 20px; 
+            padding: 20px;
+            resize:none;
         }
     }
     #right {
@@ -619,6 +639,10 @@ body {
     transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
+}
+
+#del {
+    float: right;
 }
 
 #message {

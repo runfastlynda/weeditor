@@ -62,4 +62,38 @@ $(document).ready(function( ) {
     }
   });
 
+
+  $('#switchshort').on('click',function(){  
+    var longLink = $('#inputlink').val();
+    var shortlist = $('#shortlist');
+
+    shortlist.prepend('<li id="list">'+longLink+'<span id="del">X</span>'+'</li>');
+
+    // $.ajax({
+    //   url: 'http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_long=http://www.baidu.com',  
+    //   method: "get",
+    //   dataType: "jsonp",
+    //   cache: false,
+    //   jsonp: "jsonpCallback",
+    //   jsonpCallback: '?',  
+    //   success: function (data) {
+    //     alert('success');
+    //   },
+    //   error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //     alert("请求数据异常，状态码：" + XMLHttpRequest.status);
+    //   }
+    //   // success: function(data){
+    //   //   alert('success');
+    //   //   // console.log(data.data.urls[0].url_short);
+    //   // },
+    //   // error: function(){
+    //   //   alert('error');
+    //   // }
+    // });
+  });
+
+  $(document).on('click','#del',function(){
+    $(this).parent().remove();
+  });
+
 });

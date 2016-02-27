@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
         <script src="js/marked.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
@@ -27,6 +27,12 @@
                         <li class="todo-item" v-for="todo in todos" :class="{ completed: todo.completed }">
                             <input type="checkbox" class="toggle" v-model="todo.completed"/><label for="">{{ todo.item }}</label>
                         </li>
+                    </ul>
+                </div>
+                <div class="switchlist">
+                    <input type="text" id="inputlink" class="inputlink">
+                    <button id="switchshort" class="switchshort">转换</button>
+                    <ul id="shortlist">
                     </ul>
                 </div>
             </div>

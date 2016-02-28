@@ -85,6 +85,7 @@ body {
         box-sizing: border-box;
         float: left;
         background-color: #eee;
+        overflow: auto;
         ul{
             li {
                 list-style: none;
@@ -110,11 +111,19 @@ body {
         }
         ul {
             #list {
-                padding: 0; 
+                padding: 0;
+                width: 96%; 
             }
         }
         .inset {
             margin: 0 0 0 10px; 
+        }
+        .insettext {
+            margin: 10px 0 0;
+        }
+        .createbymyself {
+            margin: 10px 0 0;
+            padding: 10px;
         }
 
     }
@@ -667,4 +676,8 @@ body {
     transition: all 1s ease-out;
     color: #fff;
     text-align: center;
+}
+
+.red {
+    color: red;
 }

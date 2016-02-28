@@ -22,13 +22,20 @@
         </div>
         <div class="main clearfix">
             <div id="left" class="">
-                <label class="inset">插入</label>
-                <select id="end">
-                  <option></option>
-                  <option>-完-</option>
-                  <option>-待续-</option>
-                  <option>原创第几篇</option>
-                </select>
+                <div id="createbymyself" class="createbymyself" contentEditable="true">
+                    这是日拱一卒的第 篇原创文章。欢迎转发分享，未经作者授权，不欢迎其他公众号转载。
+                </div>
+                <input id="startinserttext" type="button" value="插入文首"></input>
+                <div class="insettext">
+                    <label class="inset">文尾添加</label>
+                    <select id="endinserttext">
+                        <option></option>
+                        <option>-完-</option>
+                        <option>-待续-</option>
+                    </select>
+                </div>
+
+
                 <div id="checklist">
                     <ul>
                         <li class="todo-item" v-for="todo in todos" :class="{ completed: todo.completed }">
@@ -36,6 +43,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="switchlist">
                     <input type="text" id="inputlink" class="inputlink">
                     <button id="switchshort" class="switchshort">转换</button>
@@ -64,6 +72,7 @@
                   { item: '图片距离' },
                   { item: '你还可以看' },
                   { item: '参考引用' },
+                  { item: '文尾添加-完-/-待续-' },
                   { item: '文末关注Logo图' },
                   { item: '原创声明' },
                   { item: '文章标签分类' },

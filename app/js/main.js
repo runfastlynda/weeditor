@@ -97,36 +97,80 @@ $(document).ready(function( ) {
   });
 
   jQuery.fn.extend({
-  insertAtCaret: function(myValue){
-    return this.each(function(i) {
-      if (document.selection) {
-        //For browsers like Internet Explorer
-        this.focus();
-        var sel = document.selection.createRange();
-        sel.text = myValue;
-        this.focus();
-      }
-      else if (this.selectionStart || this.selectionStart == '0') {
-        //For browsers like Firefox and Webkit based
-        var startPos = this.selectionStart;
-        var endPos = this.selectionEnd;
-        var scrollTop = this.scrollTop;
-        this.value = this.value.substring(0, startPos)+myValue+this.value.substring(endPos,this.value.length);
-        this.focus();
-        this.selectionStart = startPos + myValue.length;
-        this.selectionEnd = startPos + myValue.length;
-        this.scrollTop = scrollTop;
-      } else {
-        this.value += myValue;
-        this.focus();
-      }
-    });
-  }
+    insertAtCaret: function(myValue){
+      return this.each(function(i) {
+        if (document.selection) {
+          //For browsers like Internet Explorer
+          this.focus();
+          var sel = document.selection.createRange();
+          sel.text = myValue;
+          this.focus();
+        }
+        else if (this.selectionStart || this.selectionStart == '0') {
+          //For browsers like Firefox and Webkit based
+          var startPos = this.selectionStart;
+          var endPos = this.selectionEnd;
+          var scrollTop = this.scrollTop;
+          this.value = this.value.substring(0, startPos)+myValue+this.value.substring(endPos,this.value.length);
+          this.focus();
+          this.selectionStart = startPos + myValue.length;
+          this.selectionEnd = startPos + myValue.length;
+          this.scrollTop = scrollTop;
+        } else {
+          this.value += myValue;
+          this.focus();
+        }
+      });
+    }
   });
 
-  $('#end').on('change',function(){
-    var end = $('#end').find("option:selected").text();
-    $('#markdown').insertAtCaret('\n'+end+'\n');
+  jQuery.fn.extend({
+    getCurPos: function(){
+      var e=$(this).get(0);
+      e.focus();
+      if(e.selectionStart){    //FF
+        return e.selectionStart;
+      }
+      if(document.selection){    //IE
+        var r = document.selection.createRange();
+        if (r == null) {
+            return e.value.length;
+        }
+        var re = e.createTextRange();
+        var rc = re.duplicate();
+        re.moveToBookmark(r.getBookmark());
+        rc.setEndPoint('EndToStart', re);
+        return rc.text.length;
+      }
+      return e.value.length;
+    },
+    setCurPos: function(pos) {
+      var e=$(this).get(0);
+      e.focus();
+      if (e.setSelectionRange) {
+        e.setSelectionRange(pos, pos);
+      } else if (e.createTextRange) {
+        var range = e.createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+      }
+    }        
+  });
+
+
+  $('#endinserttext').on('change',function(){
+    var endPos = $('#markdown').val().length;
+    $('#markdown').setCurPos(endPos);
+    var endinserttext = $('#endinserttext').find("option:selected").text();
+    $('#markdown').insertAtCaret('\n'+endinserttext+'\n');
+  });
+
+  $('#startinserttext').on('click',function(){
+    $('#markdown').setCurPos();
+    var startinserttext = $('#createbymyself').text().trim();
+    $('#markdown').insertAtCaret('\n'+startinserttext+'\n');
   });
 
 });

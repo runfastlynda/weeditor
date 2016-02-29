@@ -131,6 +131,15 @@ body {
     border-left: none;
     font-size: 18px;
     overflow: scroll; }
+  .main #right > :first-child {
+    font-size: 1.3em;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    padding-top: 2px;
+    outline: 0px;
+    font-weight: normal;
+    line-height: 1.3em;
+    color: #333333; }
   .main .DayoneX h1 {
     font-size: 1.3em;
     margin-bottom: 14px;

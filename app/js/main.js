@@ -146,7 +146,7 @@ $(document).ready(function( ) {
       }
       if(document.selection){    //IE
         var r = document.selection.createRange();
-        if (r == null) {
+        if (r === null) {
             return e.value.length;
         }
         var re = e.createTextRange();
@@ -181,7 +181,6 @@ $(document).ready(function( ) {
   });
 
   $('#startinserttext').on('click',function(){
-    $('#markdown').setCurPos();
     var startinserttext = $('#createbymyself').text().trim();
     $('#markdown').insertAtCaret('\n'+startinserttext+'\n');
   });
@@ -192,10 +191,10 @@ $(document).ready(function( ) {
     }
   });
   clipboard.on('success', function(e) {
-    alertMessage('复制成功')
+    alertMessage('复制成功');
   });
   clipboard.on('error', function(e) {
-    alertMessage('复制失败，请手动复制')
+    alertMessage('复制失败，请手动复制');
   });
 
 });

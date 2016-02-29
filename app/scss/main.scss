@@ -52,7 +52,7 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         color: #3D4652;
-        margin-left: 150px;
+        margin-left: 360px;
     }
     a {
         float: right;
@@ -71,6 +71,10 @@ body {
         background-color: #3D4652;
         color: #fff;
     }
+    #copyall {
+        float: right;
+        margin: 3px 20px 0 0;
+    }
 }
 
 .main {
@@ -85,6 +89,7 @@ body {
         box-sizing: border-box;
         float: left;
         background-color: #eee;
+        overflow: auto;
         ul{
             li {
                 list-style: none;
@@ -95,6 +100,36 @@ body {
                 }
             }
         }
+        .switchlist {
+            width: 210px;
+            margin: 20px auto;
+            .inputlink {
+                height: 20px;
+                width: 160px;
+                outline:none;
+            }
+            .switchshort {
+                width: 40px;
+                height: 24px;
+            }
+        }
+        ul {
+            #list {
+                padding: 0;
+                width: 96%; 
+            }
+        }
+        .inset {
+            margin: 0 0 0 10px; 
+        }
+        .insettext {
+            margin: 10px 0 0;
+        }
+        .createbymyself {
+            margin: 10px 0 0;
+            padding: 10px;
+        }
+
     }
     #center {
         width: 50%;
@@ -109,7 +144,8 @@ body {
             outline: none;
             border: 1px solid #ddd;
             font-size: 18px;
-            padding: 20px; 
+            padding: 20px;
+            resize:none;
         }
     }
     #right {
@@ -122,6 +158,16 @@ body {
         border-left: none;
         font-size: 18px;
         overflow: scroll;
+    }
+    #right>:first-child {
+        font-size: 1.3em;
+        margin-bottom: 14px;
+        margin-top: 14px;
+        padding-top: 2px;
+        outline: 0px;
+        font-weight: normal;
+        line-height: 1.3em;
+        color: rgb(51, 51, 51);
     }
     .DayoneX {
       h1 {
@@ -621,23 +667,28 @@ body {
     -webkit-transform: rotate(-90deg);
 }
 
+#del {
+    float: right;
+}
+
 #message {
     position: absolute;
-    top: 200px;
-    left: 35%;
+    bottom: 0px;
+    left: 0;
     margin: 0 auto;
-    width: 300px;
-    padding: 40px;
+    width: 100%;
+    padding: 10px;
     background: #EA6C6C;
     display: none;
-    font-size: 1.5em;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    font-size: 1em;
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
     color: #fff;
     text-align: center;
+}
+
+.red {
+    color: red;
 }

@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
         <script src="js/marked.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
@@ -15,6 +16,7 @@
           <span class="name">weeditor</span>
           <p id="save">save</p>
           <a href="http://wowubuntu.com/markdown/" target="_blank">Markdown帮助文档</a>
+          <span id="copyall">一键复制</span>
           <select id="selector">
             <option selected>DayoneX</option>
             <option>Dayone</option>
@@ -22,11 +24,32 @@
         </div>
         <div class="main clearfix">
             <div id="left" class="">
+                <div id="createbymyself" class="createbymyself" contentEditable="true">
+                    这是日拱一卒的第 篇原创文章。欢迎转发分享，未经作者授权，不欢迎其他公众号转载。
+                </div>
+                <input id="startinserttext" type="button" value="插入"></input>
+                <div class="insettext">
+                    <label class="inset">文尾添加</label>
+                    <select id="endinserttext">
+                        <option></option>
+                        <option>-完-</option>
+                        <option>-待续-</option>
+                    </select>
+                </div>
+
+
                 <div id="checklist">
                     <ul>
                         <li class="todo-item" v-for="todo in todos" :class="{ completed: todo.completed }">
                             <input type="checkbox" class="toggle" v-model="todo.completed"/><label for="">{{ todo.item }}</label>
                         </li>
+                    </ul>
+                </div>
+
+                <div class="switchlist">
+                    <input type="text" id="inputlink" class="inputlink">
+                    <button id="switchshort" class="switchshort">转换</button>
+                    <ul id="shortlist">
                     </ul>
                 </div>
             </div>
@@ -49,9 +72,9 @@
                   { item: '文章原创篇数' },
                   { item: '代码距离' },
                   { item: '图片距离' },
-                  { item: '文章结尾(-完-，-待续-)' },
                   { item: '你还可以看' },
                   { item: '参考引用' },
+                  { item: '文尾添加-完-/-待续-' },
                   { item: '文末关注Logo图' },
                   { item: '原创声明' },
                   { item: '文章标签分类' },
@@ -63,7 +86,7 @@
             new Vue({
               el: '.main',
               data: {
-                input: ''
+                input: '# '
               },
               filters: {
                 marked: marked

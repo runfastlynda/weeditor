@@ -34,6 +34,19 @@ $(document).ready(function( ) {
     }, 3000);
   }
 
+  var autoSave = setInterval(function(){
+    populateStorage();
+
+    var myDate = new Date();
+    var mytime=myDate.toLocaleTimeString();
+
+    if(localStorage.getItem('page')){
+      alertMessage(mytime+" 保存成功 ");
+    }else{
+      alertMessage("未保存成功");
+    }
+  },60000);
+
   $('#save').on('click',function(){
     populateStorage();
 

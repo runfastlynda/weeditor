@@ -48,7 +48,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #3D4652;
-    margin-left: 150px; }
+    margin-left: 360px; }
   .banner a {
     float: right;
     margin-right: 20px;
@@ -498,17 +498,14 @@ body {
 
 #message {
   position: absolute;
-  top: 200px;
-  left: 35%;
+  bottom: 0px;
+  left: 0;
   margin: 0 auto;
-  width: 300px;
-  padding: 40px;
+  width: 100%;
+  padding: 10px;
   background: #EA6C6C;
   display: none;
-  font-size: 1.5em;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  font-size: 1em;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;

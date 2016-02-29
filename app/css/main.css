@@ -63,6 +63,9 @@ body {
     cursor: pointer;
     background-color: #3D4652;
     color: #fff; }
+  .banner #copyall {
+    float: right;
+    margin: 3px 20px 0 0; }
 
 .main {
   width: 100%;

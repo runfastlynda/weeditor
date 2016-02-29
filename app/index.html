@@ -8,6 +8,7 @@
         <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
         <script src="js/marked.min.js"></script>
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
     </head>
     <body>
         <div class="banner clearfix"  v-on:click="toggle">
@@ -15,6 +16,7 @@
           <span class="name">weeditor</span>
           <p id="save">save</p>
           <a href="http://wowubuntu.com/markdown/" target="_blank">Markdown帮助文档</a>
+          <span id="copyall">一键复制</span>
           <select id="selector">
             <option selected>DayoneX</option>
             <option>Dayone</option>

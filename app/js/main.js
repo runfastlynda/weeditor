@@ -173,4 +173,16 @@ $(document).ready(function( ) {
     $('#markdown').insertAtCaret('\n'+startinserttext+'\n');
   });
 
+  var clipboard = new Clipboard('#copyall', {
+    target: function() {
+        return document.getElementById('right');
+    }
+  });
+  clipboard.on('success', function(e) {
+    alertMessage('复制成功')
+  });
+  clipboard.on('error', function(e) {
+    alertMessage('复制失败，请手动复制')
+  });
+
 });

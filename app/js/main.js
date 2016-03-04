@@ -79,16 +79,14 @@ $(document).ready(function( ) {
   $('#switchshort').on('click',function(){  
     var longLink = $('#inputlink').val();
     var shortlist = $('#shortlist');
-
     shortlist.prepend('<li id="list">'+longLink+'<span id="del">X</span>'+'</li>');
-
     // $.ajax({
     //   url: 'http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_long=http://www.baidu.com',  
     //   method: "get",
     //   dataType: "jsonp",
     //   cache: false,
     //   jsonp: "jsonpCallback",
-    //   jsonpCallback: '?',  
+    //   jsonpCallback: '?',
     //   success: function (data) {
     //     alert('success');
     //   },

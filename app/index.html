@@ -54,7 +54,11 @@
                 </div>
             </div>
             <div id="center">
-                <textarea id="markdown" v-model="input"></textarea>
+                <div id="linenums">
+                    <textarea id="linenum" disabled>1</textarea>
+                </div>
+                <textarea wrap="off" class="inputtext" id="markdown" v-model="input" >
+                </textarea>    
             </div>
             <div id="right" class="DayoneX" v-html="input | marked">
             </div>
@@ -93,5 +97,6 @@
               }
             })
         </script>
+
     </body>
 </html>

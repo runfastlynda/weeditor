@@ -4,7 +4,7 @@ $(document).ready(function( ) {
   $('#right').scrollTop($(this).scrollTop()); 
   $('#right').scrollLeft($(this).scrollLeft()); 
   $('#linenum').scrollTop($(this).scrollTop()); 
-  $('#linenum').scrollLeft($(this).scrollLeft());
+  $('#linenum').scrollLeft($(this).scrollLeft()); 
   }); 
 
   if(!localStorage.getItem('page')) {
@@ -61,8 +61,6 @@ $(document).ready(function( ) {
       alertMessage("未保存成功");
     }
   });
-
-  $('#markdown').focus();
 
   $('#more').on('click',function(){
     $('#left').toggle(100);
@@ -196,5 +194,34 @@ $(document).ready(function( ) {
   clipboard.on('error', function(e) {
     alertMessage('复制失败，请手动复制');
   });
+
+  $('#markdown').keyup(function(){
+    keyUp();
+  });
+
+  var num = '';
+  var len = 1;
+  function keyUp(){
+    var input = document.getElementById("markdown");
+    var inputtext = input.value;
+    inputtext = inputtext.replace(/\r/gi,"");
+    inputtext = inputtext.split("\n");
+    len = inputtext.length;
+    line(len);
+  }
+  function line(len){
+    var linenum = document.getElementById("linenum");
+    for(var i=1;i<=len;i++){
+      if(document.all){
+        num+=i+"\r\n";
+      }else{
+        num+=i+"\n";
+      }
+    }
+    linenum.value = num;
+    num = "";
+  }
+
+  $('#markdown').focus();
 
 });

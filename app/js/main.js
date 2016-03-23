@@ -178,6 +178,11 @@ $(document).ready(function( ) {
     $('#markdown').insertAtCaret('\n'+endinserttext+'\n');
   });
 
+  $('#startinsertjekylltext').on('click',function(){
+    var pagetitle = $('#right p:first').text();
+    $('#markdown').insertAtCaret('\n'+'---'+'\n'+'layout: post'+'\n'+'title: '+ pagetitle +'\n'+'---'+'\n');
+  });
+
   $('#startinserttext').on('click',function(){
     var startinserttext = $('#createbymyself').text().trim();
     $('#markdown').insertAtCaret('\n'+startinserttext+'\n');

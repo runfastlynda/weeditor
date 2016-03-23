@@ -5,13 +5,12 @@
         <meta name="viewport" content="width=device-width">
         <title>weeditor</title>
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/vue.js"></script>
         <script src="js/marked.min.js"></script>
-        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
     </head>
     <body>
-        <div class="banner clearfix"  v-on:click="toggle">
+        <div class="banner clearfix"  v-on:click="toggle" id="container">
           <img id="more" src="img/more.png" alt="">
           <span class="name">weeditor</span>
           <p id="save">save</p>
@@ -21,6 +20,11 @@
             <option selected>DayoneX</option>
             <option>Dayone</option>
           </select>
+          <span class="uploadimg" id="pickfiles">上传图片</span>
+          <div class="uploadprogress" style="margin-top:40px;display:none">
+              <span id="fsUploadProgress">
+              </span>
+          </div>
         </div>
         <div class="main clearfix">
             <div id="left" class="">
@@ -28,6 +32,7 @@
                     这是日拱一卒的第 篇原创文章。欢迎转发分享，未经作者授权，不欢迎其他公众号转载。
                 </div>
                 <input id="startinserttext" type="button" value="插入"></input>
+                <input id="startinsertjekylltext" type="button" value="插入jekyll头信息"></input>
                 <div class="insettext">
                     <label class="inset">文尾添加</label>
                     <select id="endinserttext">
@@ -93,5 +98,8 @@
               }
             })
         </script>
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/plupload.full.min.js"></script>
+        <script src="js/qiniu.js"></script>
     </body>
 </html>

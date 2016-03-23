@@ -107,6 +107,12 @@ $(document).ready(function( ) {
     $(this).parent().remove();
   });
 
+  function insertimg(file){
+    var endPos = document.getElementById('markdown').value.length;
+    document.getElementById('markdown').setCurPos(endPos);
+    document.getElementById('markdown').insertAtCaret('\n'+'http://7xjufd.dl1.z0.glb.clouddn.com/'+file.name+'\n');
+  }
+
   jQuery.fn.extend({
     insertAtCaret: function(myValue){
       return this.each(function(i) {
@@ -178,6 +184,11 @@ $(document).ready(function( ) {
     $('#markdown').insertAtCaret('\n'+endinserttext+'\n');
   });
 
+  $('#startinsertjekylltext').on('click',function(){
+    var pagetitle = $('#right p:first').text();
+    $('#markdown').insertAtCaret('\n'+'---'+'\n'+'layout: post'+'\n'+'title: '+ pagetitle +'\n'+'---'+'\n');
+  });
+
   $('#startinserttext').on('click',function(){
     var startinserttext = $('#createbymyself').text().trim();
     $('#markdown').insertAtCaret('\n'+startinserttext+'\n');
@@ -195,4 +206,71 @@ $(document).ready(function( ) {
     alertMessage('复制失败，请手动复制');
   });
 
+  $(function() {
+    var uploader = Qiniu.uploader({
+      runtimes: 'html5,flash,html4',
+      browse_button: document.getElementById('pickfiles'),
+      container: 'container',
+      drop_element: 'container',
+      max_file_size: '1000mb',
+      flash_swf_url: 'bower_components/plupload/js/Moxie.swf',
+      dragdrop: true,
+      chunk_size: '4mb',
+      uptoken_url: '/uptoken',
+      domain: '7xjufd.dl1.z0.glb.clouddn.com',
+      get_new_uptoken: false,
+          // downtoken_url: '/downtoken',
+          // unique_names: true,
+          // save_key: true,
+          // x_vars: {
+          //     'id': '1234',
+          //     'time': function(up, file) {
+          //         var time = (new Date()).getTime();
+          //         // do something with 'time'
+          //         return time;
+          //     },
+          // },
+      auto_start: true,
+      log_level: 5,
+      init: {
+        // 'FilesAdded': function(up, files) {
+        //   $('table').show();
+        //   plupload.each(files, function(file) {
+        //     var progress = new FileProgress(file, 'fsUploadProgress');
+        //     progress.setStatus("等待...");
+        //     progress.bindUploadCancel(up);
+        //   });
+        // },
+        // 'BeforeUpload': function(up, file) {
+        //   var progress = new FileProgress(file, 'fsUploadProgress');
+        //   var chunk_size = plupload.parseSize(this.getOption('chunk_size'));
+        //   if (up.runtime === 'html5' && chunk_size) {
+        //     progress.setChunkProgess(chunk_size);
+        //   }
+        // },
+        // 'UploadProgress': function(up, file) {
+        //   var progress = new FileProgress(file, 'fsUploadProgress');
+        //   var chunk_size = plupload.parseSize(this.getOption('chunk_size'));
+        //   progress.setProgress(file.percent + "%", file.speed, chunk_size);
+        // },
+        'UploadComplete': function() {
+        },
+        'FileUploaded': function(up, file, info) {
+          alertMessage('上传成功');
+          var endPos = document.getElementById('markdown').value.length;
+          document.getElementById('markdown').setCurPos(endPos);
+          document.getElementById('markdown').insertAtCaret('\n'+'http://7xjufd.dl1.z0.glb.clouddn.com/'+file.name+'\n');
+        },
+        'Error': function(up, err, errTip) {
+          alertMessage('上传失败');
+        }
+              // ,
+              // 'Key': function(up, file) {
+              //     var key = "";
+              //     // do something with key
+              //     return key
+              // }
+      }
+    });
+  });
 });

@@ -64,8 +64,20 @@ body {
     background-color: #3D4652;
     color: #fff; }
   .banner #copyall {
+    cursor: pointer;
     float: right;
     margin: 3px 20px 0 0; }
+  .banner .uploadimg {
+    cursor: pointer;
+    float: right;
+    margin: 3px 20px 0 0; }
+  .banner .uploadprogress {
+    width: 100px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    right: 300px; }
 
 .main {
   width: 100%;

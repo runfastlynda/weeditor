@@ -72,8 +72,22 @@ body {
         color: #fff;
     }
     #copyall {
+        cursor:pointer;
         float: right;
         margin: 3px 20px 0 0;
+    }
+    .uploadimg {
+        cursor:pointer;
+        float: right;
+        margin: 3px 20px 0 0;
+    }
+    .uploadprogress {
+        width: 100px;
+        height: 80px;
+        background-color: red;
+        position: absolute;
+        top: 100px;
+        right: 300px;
     }
 }
 
